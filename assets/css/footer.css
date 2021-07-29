@@ -1,0 +1,172 @@
+.footer {
+    border-top: 4px solid var(--primary-brand-color);
+}
+
+.customer_care {
+    background-color: rgb(251,251,251);
+}
+
+.customer_care_list {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.customer_care_label {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: var(--text-color-footer);
+    text-transform: uppercase;
+}
+.customer_care_item {
+    padding-bottom: 11px;
+}
+.customer_care_item a{
+    color: var(--text-color-footer);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.customer_care_label,
+.customer_care_item a{
+    text-decoration: none;
+}
+
+.customer_care_item_img {
+    display: flex;
+    align-items: center;
+}
+
+.customer_care_item_img-qr {
+    width: 84px;
+    border: 1px solid rgb(212, 212, 212);
+    margin-right: 15px;
+}
+
+.customer_care_item_img-app {
+    width: 84px;
+}
+
+.customer_care_item a i{
+    font-size: 2rem;
+    width: 40px;
+}
+
+.customer_care_item_Social {
+    display: flex;
+    align-items: center;
+}
+
+.customer_care_item_img-payment-visa {
+    padding-top: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.customer_care_item_img-payment,
+.customer_care_item-transport {
+    padding: 0 20px 20px 0;
+}
+
+.country_region {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid rgb(221, 221, 221);
+    padding: 40px 0;
+}
+
+.country_region-left {
+    font-size: 1.4rem;
+    color: var(--text-color-footer);
+}
+
+.country_region-right {
+
+}
+
+.country_region_list {
+    list-style: none;
+    display: flex;
+}
+
+.country_region_label,
+.country_region_item {
+    font-size: 1.4rem;
+    color: var(--text-color-footer);
+}
+.country_region_item {
+    padding: 0 5px;
+    border-right: 1px solid rgb(175, 175, 175);
+}
+.country_region_item:last-child {
+    border: none;
+    padding: 0 0 0 5px;
+}
+.country_region_item_link {
+    text-decoration: none;
+    color: var(--text-color-footer);
+}
+
+.law {
+    background-color: rgb(245,245,245);
+    width: 100%;
+    padding: 40px 0;
+}
+
+.law_policy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.law_policy_list {
+    list-style: none;
+    display: flex;
+}
+
+.law_policy_item {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color-footer);
+    text-transform: uppercase;
+    border-right: 1px solid rgb(197, 197, 197);
+    padding: 0 25px;
+}
+
+.law_policy_item:last-child {
+    border: none;
+}
+
+.law_moiat{
+    display: flex;
+    flex-direction: column;
+}
+.law_moiat_img {
+    display: flex;
+    justify-content: center;
+}
+.law_moiat_img-congthuong {
+    width: 100px;
+    margin: 0 20px;
+}
+
+.law_moiat_label {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color-footer);
+}
+
+.law_location {
+    margin-top: 25px;
+}
+
+.law_location_label {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color-footer);
+    line-height: 22px;
+}

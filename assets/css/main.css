@@ -1,0 +1,714 @@
+.header{
+    height: var(--header-height);
+    background-image: linear-gradient(0,#fe6433,#f53e2d);
+    
+}
+
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+    Flex-wrap: wrap;
+    /* border: 1px solid violet; */
+    height: var(--header-nav-height);
+}
+.header__navbar--list{
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* justify-content: space-between; */
+    list-style: none;    
+    padding-inline-start: 0;   /* chỉnh lại khoảng cách padding mặc định của thẻ UL */   
+    /* border: 1px solid rebeccapurple;     */
+    margin-top: 6px;
+}
+
+
+
+
+
+
+.header__navbar--item,
+.header__navbar--item--link{
+    border: 1px solid violet;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem; /* 15px */
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+    
+}
+
+
+
+.header__navbar--item--link{
+    display: inline-flex;
+    justify-content: space-between;    
+    z-index: 2;
+}
+.thongbao,
+.trogiup{
+    /* border: 1px solid black; */
+    align-self: center;
+}
+.fa-bell{
+    /* border: 1px solid black; */
+    align-self: center;
+}
+
+.header__navbar--item:hover,
+.header__navbar--item--link:hover,
+.header__navbar-icon-link:hover{
+    cursor: pointer; /* chuyển icon chuột thành hình bàn tay */
+    color: rgba(255, 255, 255,0.7); /* không nên để opacity sẽ ảnh hưởng lên dấu gạch phân cách */
+}
+
+.no-pointer:hover{
+    cursor: default;
+    color: white;
+}
+
+.header__navbar--item--bold{
+    font-weight: 400;
+}
+
+.header__navbar--item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header__navbar--item{
+    margin: 0 8px;
+    position: relative;
+    /* min-width: 26px; */
+    display: flex;
+    align-items: center;    
+    /* border: 1px solid violet; */
+    height: 100%;    
+}
+
+.header__navbar-icon-link{    
+    color: var(--white-color);   
+    text-decoration: none;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header__navbar-icon{
+    height: 100%;
+    font-size: 1.9rem;
+    margin: 0 4px;
+}
+.fab{
+    height: 100%;
+}
+
+
+
+
+.test{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ====================header_OR_CODE===================== */
+.header__navbar--item-caunoi{
+    display: flex;    
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 120%;
+    left: 0;
+    /* background-color: violet; */
+    display: none;
+}
+/* caunoi */
+.header__navbar--item-caunoi::before{    
+    content: "";    
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -5%;    
+    /* background-color: red;     */
+}
+.header__qr{    
+    background-color: var(--white-color);
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;/* vị trí xác địch phụ thuộc vào thẻ li: vào cửa hàng */ 
+    padding: 8px;
+    animation: chuyen_dong-opacity ease-in-out 0.45s;
+    -webkit-animation: chuyen_dong-opacity ease-in-out 0.45s;
+    -moz-animation:chuyen_dong-opacity ease-in-out 0.45s;
+    -o-animation: chuyen_dong-opacity ease-in-out 0.45s;    
+    will-change: opacity, transform;
+}
+/* hiện tại header__qr đang là display none (không hiển thị)
+khi header__navbar--item--has-qr được hover thì .header__qr 
+sẽ được sử thành display block*/
+.header__navbar--item--has-qr:hover .header__navbar--item-caunoi {
+    display: block;
+}
+
+
+.header__qr-img{
+    width: 100%;
+}
+
+.header__qr-apps{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+.header__qr-link:nth-child(1){
+    margin-left: 11px;
+}
+.header__qr-link:nth-child(2){
+    margin-right: 11px;
+}
+
+.header__qr-download-img{
+    height: 16px;    
+}   
+
+/* ================================================================== */
+/* =========================bang thong bao=========================== */
+/* ================================================================== */
+.header__navbar--item--has-thongbao:hover .header__thongbao--caunoi {
+    display: block;    
+}
+
+
+/* tam giác */
+.header__thongbao::before{
+    content: "";
+    border-width: 20px 26px;
+    border-style:  solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    top: -30px;
+    right: 4px;
+    /* background-color: violet; */
+}
+
+.header__thongbao-item:hover,
+.header__thongbao-chan-xemtatca:hover{
+    background-color: var(--hover-color-blur);
+}
+
+@keyframes header__thongbao--lonlen {
+    from{
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__thongbao--caunoi{    
+    position: absolute;
+    top: -5%;
+    width: 100%;
+    height: 40px;
+    right: 0%;
+    /* background-color: violet; */
+    display: none;
+}
+
+.header__thongbao{
+    position: absolute;
+    top: 80%;
+    width: 380px;  
+    right: 0;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;    
+    transform-origin: 90% 0%;
+    animation: header__thongbao--lonlen ease-out 0.22s;
+
+    -webkit-animation: header__thongbao--lonlen ease-out 0.22s;
+    -moz-animation: cheader__thongbao--lonlen ease-out 0.22s;
+    -o-animation: header__thongbao--lonlen ease-out 0.22s;
+
+    -webkit-transform-origin: 90% 0%;
+    -moz-transform-origin: 90% 0%;
+    -o-transform-origin: 90% 0%;
+    -ms-transform-origin: 90% 0%;
+    will-change: opacity, transform;
+    box-shadow: 0px 1px 2px #c0c0c0;
+}
+/* ===========================dau====================== */
+.header__thongbao-header{
+    --height: 40px;
+    height:var(--height);
+    /* border: 1px solid lawngreen; */
+    background-color: var(--white-color);
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.header__thongbao-header h3{    
+    /* border: 1px solid red; */
+    /* background-color: rgb(92, 92, 201); */
+    color: var(--text-color);
+    padding: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: var(--height);   
+}
+
+/* ========================than========================== */
+.header__thongbao-list{
+    /* border: 1px solid lightblue; */
+    /* padding: 0 12px 0px 12px; */
+    list-style: none;
+}
+
+.header__thongbao-item{
+    /* border: 1px solid lightblue; */
+    padding: 5px 12px 0px 12px;
+}
+.header__thongbao-item--view{
+    background-color: #ffede7;
+}
+
+.header__thongbao-item-link{
+    display: flex;
+    /* border: 2px solid royalblue; */
+    text-decoration: none;
+    padding: 0 0 10px 0;
+}
+/* ========================== */
+.header__thongbao-item-link-img{
+    object-fit: contain;
+    width: 40px;
+    align-self: flex-start;
+}
+
+/* =========================== */
+.header__thongbao-item-link-info{
+    /* border: 1px solid red; */
+    padding-left: 12px;
+    
+}
+
+.header__thongbao-item-link-info-name{
+    display: block; /* vì là thẻ span không có thuộc tính khối nên không xuống hàng */
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    padding: 0 0 10px 0;
+    /* border: 1px solid red;     */
+}
+
+.header__thongbao-item-link-info-dereption{
+    display: block;
+    font-size: 1rem;
+}
+/* ====================== */
+
+/* =======================chan======================== */
+.header__thongbao-chan{ 
+}
+.header__thongbao-chan-xemtatca{
+    /* border: 1px solid #8fbc8f; */
+    display: flex;
+    justify-content: center;     
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 5px 0;
+    color: var(--text-color);
+}
+/* ================================================================== */
+/* ================================================================== */
+
+/* ================================================================== */
+/* ==========================authen-modal============================ */
+/* ================================================================== */
+
+
+.auth-from{        
+    /* border: 1px solid red; */
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.auth-from__dau-than{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 0 32px;
+    width: 100%;
+}
+
+.auth-from__dau{
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.auth-from__heading{
+    
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-from__chuyen{
+    /* border: 1px solid violet; */
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.auth-from__than-group{
+    /* border: 1px solid steelblue; */
+    margin-top: 40px;
+    width: 100%;
+}
+
+.auth-from__than-group-input{
+    border: 1px solid var(--broder-color);
+    border-radius: 4px;
+    margin: 16px 0;
+    padding: 0 12px;    
+    display: block;
+    height: 38px;
+    width: 100%;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.auth-from__than-group-input:focus{
+    border-color: var(--primary-color);
+}
+
+.auth-from__than-note{
+    /* border: 1px solid darkcyan; */
+    margin-top: 20px;
+}
+
+.auth-from__than-chinhsach{
+    border: 1px solid teal;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-from__than-chinhsach-link{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;    
+}
+
+.auth-from__than-controls{
+    /* border: 1px solid darkcyan; */
+    display: flex;
+    justify-content: flex-end;
+    margin: 60px 0 20px 0;
+     
+}
+
+.auth-from__than-controls-btn{
+    margin-left: 12px;
+    line-height: 2px;
+}
+
+/* ============chan================ */
+
+.auth-from__chan{
+    width: 100%;
+    padding: 0 32px;
+    /* border: 1px solid red; */
+    display: flex;
+    height: 56px;
+    justify-content: space-around;
+    align-items: center; 
+    background-color: #f1f1f1;   
+}
+
+/* ======================================== */
+.auth-from__chan-btn-fb{
+    /* border: 1px solid violet; */
+    width: 100%;    
+    margin-right: 10px;    
+    background-color: #365899;
+    color: var(--white-color);
+    display: flex;
+    justify-content: left;
+}
+.auth-from__chan-btn-gg{
+    /* border: 1px solid violet; */
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: left;   
+}
+/* ======================================== */
+.auth-from__chan-btn-fb 
+.auth-from__chan-icon-fb{ 
+    font-size: 2.2rem;
+    color:var(--white-color);
+    /* border: 1px solid violet; */
+}
+
+.auth-from__chan-btn-gg
+.auth-from__chan-icon-gg{    
+    /* border: 1px solid violet;     */
+    font-size: 2rem;
+}
+/* ======================================== */
+.auth-from__chan-btn-fb-text{
+    /* border: 1px solid violet;     */
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+.auth-from__chan-btn-gg-text{
+    /* border: 1px solid violet;      */
+    width: 100%;
+    text-align: center;
+}
+
+/* ====================đăng ký=================== */
+
+
+
+
+
+.auth-from__than-help{
+    /* border: 1px solid steelblue; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.auth-from__than-help-link{
+    text-decoration: none;
+    /* border: 1px solid springgreen; */
+    font-size: 1.4rem;
+    height: 100%;
+}
+
+.auth-from__than-help-separate{
+    display: block;
+    height: 22px;
+    border-left: 1px solid rgb(216, 216, 216);
+    margin: 0 8px;
+}
+
+.auth-from__than-help-link-Quenmk{
+    color: var(--primary-color);
+}
+
+.auth-from__than-help-link-CanTG{
+    cursor: pointer;
+    color: rgb(172, 172, 172);
+}
+
+/* ================================================================== */
+/* ==========================Header_all_seach======================== */
+/* ================================================================== */
+.header_seach-btn:hover{
+    background-color:rgb(253, 141, 119);
+    cursor: pointer;
+}
+
+
+.head__All-seach{
+    /* border: 1px solid black; */
+    height: var(--header-ALL-seach-height);
+    display: flex;
+    align-items: center;
+}
+
+.header__logo{
+    /* border: 1px solid violet; */
+    height: 100%; 
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo-img{
+    /* border: 1px solid yellow;       */
+    height: 70%;
+}
+
+.header__seach{
+    flex: 1;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem;  
+    /* border: 1px solid black;   */
+}
+
+
+
+.header_seach-btn{
+    width: 60px;
+    height: 34px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;    
+    /* border: 1px solid black;   */
+}
+
+.header__seach-input{
+    flex: 1;
+    height: 100%;    
+    outline: none;
+    background-color: white;
+    border-color: transparent;
+    font-size: 1.2rem;
+    padding: 0 0 0 10px;
+    /* border: 1px solid black;   */
+}
+.header__cart{
+    /* border: 1px solid yellow; */
+    width: 150px;
+    font-size: 2.4rem;
+    text-align: center;    
+    cursor: pointer;
+}
+
+.header__cart-link{
+    color: var(--white-color);
+}
+.header__seach-selection-separation{    
+    background-color: rgb(231, 231, 231);
+    height: 60%;
+    width: 1px;
+    margin: 0 10px;       
+}
+
+/* selection */
+
+.header__seach-selection{
+    --margin: 20px;    
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 var(--margin) 0px calc(var(--margin) - 10px); 
+}
+
+.header__seach-selection-select{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;    
+    cursor: pointer;       
+}
+
+.header__seach-selection-icon_down{
+    color: rgb(155, 155, 155);
+    margin: 0 10px;
+    font-size: 1.4rem;
+    /* border: 1px solid black; */
+
+}
+
+/* selection-option */
+.header__seach-selection-option-list-item:hover{
+    cursor: pointer;
+    background-color: var(--hover-color-blur);
+}
+.header__seach-selection:hover 
+.header__seach-selection-option,
+.header__seach-selection:hover 
+.header__seach-selection-option--caunoi{
+    display: block;
+    cursor: pointer;
+}
+
+.header__seach-selection-option--caunoi{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 50px;
+    /* background-color: violet; */
+    display: none;
+}
+.header__seach-selection-option{
+    position: absolute;
+    right: 0%;
+    top: 200%;
+    width: 140%;
+    background-color: var(--white-color);
+    /* border: 1px solid red;     */
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;    
+    box-shadow: 0 1px 2px #ccc;
+    display: none;
+}
+
+
+.header__seach-selection-option-list{
+    list-style: none;   
+    width: 100%;
+}
+.header__seach-selection-option-list-item{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 100%;
+    padding: 10px 6px;
+    
+}
+.header__seach-selection-option-list-item-text{
+    /* border: 1px solid violet;     */
+    width: 80%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.header__seach-selection-option-list-item 
+.header__seach-selection-option-list-item-icon {
+    color: var(--primary-color);
+    display: none;
+    font-size: 1.6rem;
+    padding-right: 4px;
+}
+
+.header__seach-selection-option-list-item-active
+.header__seach-selection-option-list-item-icon {   
+    display: block;
+}
+
+.header__seach-selection-option-list-separa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header__seach-selection-option-list-separation{
+    width: 90%;
+    height: 1px;
+    background-color: var(--hover-color-blur);              
+}
