@@ -47,14 +47,13 @@
     width: 84px;
 }
 
+.customer_care_item_img-app-gg {
+    padding: 5px 0;
+}
+
 .customer_care_item a i{
     font-size: 2rem;
     width: 40px;
-}
-
-.customer_care_item_Social {
-    display: flex;
-    align-items: center;
 }
 
 .customer_care_item_img-payment-visa {
@@ -62,6 +61,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    width: 50px;
 }
 
 .customer_care_item_img-payment,
@@ -125,6 +125,7 @@
 .law_policy_list {
     list-style: none;
     display: flex;
+    text-align: center;
 }
 
 .law_policy_item {

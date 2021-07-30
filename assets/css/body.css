@@ -188,7 +188,7 @@
 .mobile-catery {
     margin-bottom: 15px;
     background-color: rgb(238, 238, 238);
-    padding: 15px 0 15px 0;
+    padding: 10px 0;
     display: none;
 
 }
@@ -220,7 +220,7 @@
 }
 
 .mobile-catery_item:nth-of-type(3n + 2) {
-    background-color: antiquewhite;
+    background-color: cadetblue;
 }
 
 .mobile-catery_item:nth-of-type(3n + 3) {
@@ -384,12 +384,11 @@
     color: var(--text-color);
 }
 
-.product_item_favourite i {
-    color: white;
-}
+
 
 .product_item_favourite {
     position: absolute;
+    width: 70px;
     top: 10px;
     left: -4px;
     border-bottom-right-radius: 2px;
@@ -411,8 +410,16 @@
     left: 0px;
 }
 
-.product_item_favourite span{
+.product_item_favourite span,
+.product_item_favourite i{
+    position: absolute;
     color: var(--white-color);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.product_item_favourite span {
+    left: 15px;
 }
 
 .product_item_saleoff {
@@ -430,7 +437,7 @@
 .product_item_saleoff::after {
     content: "";
     position: absolute;
-    top: 31px;
+    top: 31.6px;
     right: 0;
     border-width: 0 18px 3px ;
     border-style:  solid;
@@ -442,7 +449,8 @@
     font-size: 1.2rem;
     position: absolute;
     top: 2px;
-    right: 6px;
+    right: 5px;
+    line-height: 1.6rem;
 }
 
 .product_item_saleoff-label {
@@ -451,6 +459,7 @@
     position: absolute;
     top: 16px;
     right: 3px;
+    line-height: 1.6rem;
 }
 
 /* ================================== */

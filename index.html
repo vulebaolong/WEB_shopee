@@ -204,9 +204,11 @@
                     </div>
                     
                         <div class="nav-bottom_cart">
-                            <div class="nav-bottom_cart_icon">
+                            <label for="cart_checkbox" class="nav-bottom_cart_icon">
                                 <i class="fas fa-shopping-cart"></i>
                                 <div class="nav-bottom_cart_box">
+
+                                    <input type="checkbox" hidden id="cart_checkbox" class="cart_box-logged_checkbox">
                                     <div class="nav-bottom_cart_box-logged logged">
                                         <div class="nav-bottom_cart_box-logged_top">
                                             <p class="nav-bottom_cart_box-logged_label_top">Sản phẩm mới thêm</p>
@@ -275,6 +277,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                   
                                     <div class="nav-bottom_cart_box-not_logged ">
                                         <div class="nav-bottom_cart_box-not_logged_content">
                                             <img src="./assets/img/giohang/chuacosp.jpg" alt="">
@@ -283,7 +287,7 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </label>
                         </div>
                     
                 </div>
@@ -941,11 +945,11 @@
             </div>
         </div>
 
-        <div class="footer hide_m-t">
+        <div class="footer ">
             <div class="customer_care">
                 <div class="grid wide ">
                     <div class="row ">
-                        <div class="col l-2-4">
+                        <div class="col l-2-4 m-4 c-12 text-center">
                             <ul class="customer_care_list">
                                 <li class="customer_care_label">Chăm sóc khách hàng</li>
                                 <li class="customer_care_item"><a href="">Trung tâm trợ giúp</a></li>
@@ -961,7 +965,7 @@
                                 <li class="customer_care_item"><a href="">Chính sách bảo hành</a></li>                            
                             </ul>
                         </div>
-                        <div class="col l-2-4">
+                        <div class="col l-2-4 m-4 c-12 text-center">
                             <ul class="customer_care_list">
                                 <li class="customer_care_label">Về shoppe</li>
                                 <li class="customer_care_item"><a href="">Giới thiệu về shopee việt nam</a></li>
@@ -975,11 +979,11 @@
                                 <li class="customer_care_item"><a href="">Liên Hệ Với Truyền Thông</a></li>                      
                             </ul>
                         </div>
-                        <div class="col l-2-4">
+                        <div class="col l-2-4 m-4 c-12 text-center">
                             <ul class="customer_care_list">
                                 <li class="customer_care_label">Thanh toán</li>
                                 <li class="customer_care_item_img-payment">
-                                    <div class="row">
+                                    <div class="row justify-content">
                                         <div class="col l-4">
                                             <div class="customer_care_item_img-payment-visa" style="background-image: url(./assets/img/payment/visa.png);"> </div>
                                         </div>
@@ -1005,7 +1009,7 @@
                                 </li>
                                 <li class="customer_care_label">Đơn vị vẩn chuyển</li>
                                 <li class="customer_care_item-transport">
-                                    <div class="row">
+                                    <div class="row justify-content">
                                         <div class="col l-4">
                                             <div class="customer_care_item_img-payment-visa" style="background-image: url(./assets/img/transport/shopeeexpress.png);"> </div>
                                         </div>
@@ -1040,43 +1044,46 @@
                                 </li>                          
                             </ul>
                         </div>
-                        <div class="col l-2-4">
+                        <div class="col l-2-4 m-4 c-12 text-center">
                             <ul class="customer_care_list">
                                 <li class="customer_care_label">THEO DÕI CHÚNG TÔI TRÊN</li>
-                                <li class="customer_care_item">
-                                    <a class="customer_care_item_Social" href="">
-                                        <i class="fab fa-facebook"></i>
-                                        <span>
-                                            Facebook
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="customer_care_item">
-                                    <a class="customer_care_item_Social" href="">
-                                        <i class="fab fa-instagram-square"></i>
-                                        <span>
-                                            Instagram
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="customer_care_item">
-                                    <a class="customer_care_item_Social" href="">
-                                        <i class="fab fa-linkedin"></i>
-                                        LinkedIn
-                                    </a>
-                                </li>                           
+                                <div class="customer_care_item_wrap">
+
+                                    <li class="customer_care_item">
+                                        <a class="customer_care_item_Social" href="">
+                                            <i class="fab fa-facebook"></i>
+                                            <span>
+                                                Facebook
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="customer_care_item">
+                                        <a class="customer_care_item_Social" href="">
+                                            <i class="fab fa-instagram-square"></i>
+                                            <span>
+                                                Instagram
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="customer_care_item">
+                                        <a class="customer_care_item_Social" href="">
+                                            <i class="fab fa-linkedin"></i>
+                                            LinkedIn
+                                        </a>
+                                    </li>                           
+                                </div>
                             </ul>
                         </div>
-                        <div class="col l-2-4">
+                        <div class="col l-2-4 m-4 c-12 text-center">
                             <ul class="customer_care_list">
                                 <li class="customer_care_label">Tải ứng dụng Shopee ngay thôi</li>
                                 <li class="customer_care_item_img">
                                     <a href="">
                                         <img src="./assets/img/qr_code.png" alt="" class="customer_care_item_img-qr">                                    
                                     </a>
-                                    <a href="">
+                                    <a class="customer_care_item_img_wrap" href="">
                                         <img src="./assets/img/app_store.png" alt="" class="customer_care_item_img-app">
-                                        <img src="./assets/img/google_play.png" alt="" class="customer_care_item_img-app">
+                                        <img src="./assets/img/google_play.png" alt="" class="customer_care_item_img-app customer_care_item_img-app-gg">
                                         <img src="./assets/img/app_gallery.png" alt="" class="customer_care_item_img-app">
                                     </a>
                                 </li>                           
@@ -1129,7 +1136,7 @@
                 </div>
             </div>
             <div class="law">
-                <div class="law_policy">
+                <div class="law_policy hide_m">
                     <ul class="law_policy_list">
                         <li class="law_policy_item">Chính sách bảo mật</li>
                         <li class="law_policy_item">Quy chế hoạt động</li>

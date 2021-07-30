@@ -27,6 +27,10 @@
     text-align: center;
     font-size: 1.8rem;
     display: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header_nav-bottom_logo {
@@ -115,11 +119,10 @@
 
 .nav_left_1_item:hover a,
 .nav_left_2_item:hover a,
-.nav_right_item:hover a,
-.nav-bottom_cart_icon:hover i{
+.nav_right_item:hover a {
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-}
+} 
 
 .nav_left_1_item > a,
 .nav_left_2_item a,
@@ -202,11 +205,14 @@
 
 
 .nav_right_item:hover .box_notification::before,/* cầu nối */
-.nav-bottom_cart_icon:hover .nav-bottom_cart_box::before,/* cầu nối */
-.nav_right_item:hover .box_notification .logged,
-.nav-bottom_cart_icon:hover .nav-bottom_cart_box .logged{ 
+.nav-bottom_cart_icon:hover .nav-bottom_cart_box::before/* cầu nối */
+{ 
     display: flex;
 }
+
+
+
+
 
 .box_notification {
     position: absolute;
