@@ -186,6 +186,10 @@
 /* mobile-catery */
 
 .mobile-catery {
+    margin-bottom: 15px;
+    background-color: rgb(238, 238, 238);
+    padding: 15px 0 15px 0;
+    display: none;
 
 }
 
@@ -193,11 +197,17 @@
     display: flex;
     list-style: none;
     max-width: 100%;
-    overflow-y: auto;
-    
+    overflow-y: auto;   
+     
+}
+
+.mobile-catery_list::-webkit-scrollbar {
+    display: none;
 }
 
 .mobile-catery_item {
+    margin: 0 7px 0 0;
+    border-radius: 4px;
     flex-shrink: 0; /* khi cha là flex và các
      đối tượng con bên trong quá nhiều vượt ra ngoài cha
     thì con sẽ tự co lại để vừa với cha => để con không bị 
@@ -218,8 +228,9 @@
 }
 
 .mobile-catery_link {
+    
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--white-color);
     font-size: 1.4rem;
     display: flex;
     align-items: center;
@@ -227,9 +238,25 @@
     text-align: center;
 
     /* display: block; vì thẻ a là inline nên không sét được cao rộng */
-    height: 50px;
     min-width: 50px;
     max-width: 110px;
+
+    margin: 5px;
+    --line-height: 2rem;
+    --limit-line: 2;
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * var(--limit-line));
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--limit-line);
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
 
 }
  /* Product_list*/
@@ -357,6 +384,10 @@
     color: var(--text-color);
 }
 
+.product_item_favourite i {
+    color: white;
+}
+
 .product_item_favourite {
     position: absolute;
     top: 10px;
@@ -367,6 +398,7 @@
     background-color: currentColor;
     padding: 0 5px;
     font-size: 1.2rem;
+    height: 16px;
 }
 
 .product_item_favourite::after {
@@ -398,11 +430,11 @@
 .product_item_saleoff::after {
     content: "";
     position: absolute;
-    top: 32px;
+    top: 31px;
     right: 0;
     border-width: 0 18px 3px ;
     border-style:  solid;
-    border-color: transparent rgba(255,212,36,.9) transparent rgba(255,212,36,.9);
+    border-color: transparent rgba(255,212,36,.9);
 }
 
 .product_item_saleoff-percent {
@@ -418,7 +450,7 @@
     font-size: 1.2rem;
     position: absolute;
     top: 16px;
-    right: 4px;
+    right: 3px;
 }
 
 /* ================================== */

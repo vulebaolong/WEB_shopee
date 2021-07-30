@@ -440,6 +440,11 @@
 .nav-bottom_cart_icon i {
     font-size: 3rem;
     color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-bottom_cart_box {
@@ -504,14 +509,22 @@
 .header_sort_bar_item {
     flex: 1;
     border-right: 1px solid rgb(221, 221, 221);
-    height: 60%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
 .header_sort_bar_item:last-child {
     border: none;
+}
+.header_sort_bar_item:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.header_sort_bar_item:hover a{
+    color: var(--primary-color);
 }
 
 .header_sort_bar_link {
@@ -524,6 +537,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-bottom-search_mobile {
