@@ -18,6 +18,15 @@
     height: var(--header-nav-seach-height);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav-bottom-search-mobile {
+    color: white;
+    width: 20%;
+    text-align: center;
+    font-size: 1.8rem;
+    display: none;
 }
 
 .header_nav-bottom_logo {
@@ -356,6 +365,9 @@
 }
 
 /* ========================================= */
+
+
+
 .logo{
     display: flex;
     justify-content: center;
@@ -374,6 +386,7 @@
     padding-top: 10px;
     padding-bottom: 5px;
     width: 70%;
+    /* display: none; */
 }
 .nav-bottom-list{ 
     margin-top: 8px;
@@ -497,7 +510,7 @@
     justify-content: center;
 }
 
-.header_sort_bar_item:first-child {
+.header_sort_bar_item:last-child {
     border: none;
 }
 
@@ -511,4 +524,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.nav-bottom-search_mobile {
+    display: none;
 }

@@ -29,7 +29,9 @@ html{
     box-sizing: border-box;    
 }
 
-
+.main {
+    overflow: hidden;
+}
 
 /* animation */
 @keyframes ani-opacity {
@@ -49,6 +51,17 @@ html{
     to{ 
         /* opacity: 1; */
         transform: scale(var(--lonlen-to));
+    }
+}
+
+@keyframes ani-move_top {
+    from{        
+        
+        top: var(--top_up);
+    }
+    to{ 
+        
+        top: var(--top_down);
     }
 }
 

@@ -183,6 +183,55 @@
      cursor: default;
  }
 
+/* mobile-catery */
+
+.mobile-catery {
+
+}
+
+.mobile-catery_list {
+    display: flex;
+    list-style: none;
+    max-width: 100%;
+    overflow-y: auto;
+    
+}
+
+.mobile-catery_item {
+    flex-shrink: 0; /* khi cha là flex và các
+     đối tượng con bên trong quá nhiều vượt ra ngoài cha
+    thì con sẽ tự co lại để vừa với cha => để con không bị 
+    co lại và có kích thước bình thường để tràn ra cha thì dùng
+    flex-shrink*/
+}
+
+.mobile-catery_item:nth-of-type(3n + 1) {
+    background-color: cornflowerblue;
+}
+
+.mobile-catery_item:nth-of-type(3n + 2) {
+    background-color: antiquewhite;
+}
+
+.mobile-catery_item:nth-of-type(3n + 3) {
+    background-color: darkseagreen;
+}
+
+.mobile-catery_link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+
+    /* display: block; vì thẻ a là inline nên không sét được cao rộng */
+    height: 50px;
+    min-width: 50px;
+    max-width: 110px;
+
+}
  /* Product_list*/
 .product_list {
     margin-top: 10px;

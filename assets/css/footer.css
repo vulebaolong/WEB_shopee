@@ -83,12 +83,12 @@
 }
 
 .country_region-right {
-
 }
 
 .country_region_list {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .country_region_label,
@@ -147,6 +147,8 @@
 .law_moiat_img {
     display: flex;
     justify-content: center;
+    
+    flex-wrap: wrap;
 }
 .law_moiat_img-congthuong {
     width: 100px;
